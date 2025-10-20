@@ -1,0 +1,148 @@
+:root {
+    --primary-bg-color: #143D59; 
+    --accent-color: #F4B41A;    
+    --text-color-light: #F4B41A;
+    --text-color-dark: #143D59;
+    --button-border-radius: 8px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 15px; 
+    box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(244, 180, 26, 0.5);
+    background-image: url(kalonLogo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: var(--text-color-light);
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-bottom: 30px;
+}
+
+.link-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.link-button {
+  background: linear-gradient(var(--accent-color) 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.link-button:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+
+
+.link-button .logo-kl {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.4em; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--text-color-light);
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .brand-name {
+        font-size: 2em;
+    }
+
+    .link-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+    }
+}
